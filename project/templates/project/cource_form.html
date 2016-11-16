@@ -1,0 +1,23 @@
+{% extends 'project/base.html' %}
+{% block title %} Add Course {% endblock %}
+{% block body %}
+
+<div class="panel panel-default" style="font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;background-color:#4b5462;">
+    <div class="panel-heading" style="font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;background-color:#4b5462;">
+        <h3 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse1"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Course </a></h3>
+    </div>
+        <div id="collapse1" class="panel-collapse collapse in">
+            <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% include 'project/form-template.html' %}
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+            </div>
+
+            </form>
+    </div>
+</div>
+
+{% endblock %}

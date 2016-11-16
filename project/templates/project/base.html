@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> {% block title %} Students Club Academy {% endblock %} </title>
+    <link rel="icon" href="https://yt3.ggpht.com/-KMyUX0GJNlo/AAAAAAAAAAI/AAAAAAAAAAA/MUVpsW7Z_uc/s900-c-k-no-mo-rj-c0xffffff/photo.jpg">
+    <!-- Loads the path to your static files-->
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'project/style.css' %}" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Font Awesome glyphicons ç -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Body */
+body{color: white; font-family:'Proxima Nova','Helvetica','Corbel',sans-serif;}
+.background{background-color:#4b5462; opacity: 0.7; }
+
+/* Lists */
+ul {display:inline-block;background-color:#4b5462;padding:10px;}
+li {display:inline-block;color:white;background-color:#4b5462;padding:10px;}
+li:hover {color: #56d0b3 }
+
+/* Links */
+a:link {color:white;background-color: transparent;text-decoration: none;}
+a:visited {color:white;background-color: transparent;text-decoration: none;}
+a:hover {color: rgb(80, 193, 167);background-color: transparent;text-decoration: none;}
+a:active {color: rgb(80, 193, 167);background-color: transparent;text-decoration: underline;}
+a:link#h1 {color:white;background-color: transparent;text-decoration: none;}
+a:visited#h1 {color:white;background-color: transparent;text-decoration: none;}
+a:hover#h1 {color:#4b5462;background-color: transparent;text-decoration: none;}
+a:active#h1 {color: #4b5462;background-color: transparent;text-decoration: none;}
+a:hover#t {color:blue; background-color: transparent;text-decoration: none;}
+a:hover#f {color:blue; background-color: transparent;text-decoration: none;}
+a:hover#w {color:black; background-color: transparent;text-decoration: none;}
+
+/* Forms */
+input[type=text] {font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;color: white;width: 300px;box-sizing: border-box;border: 2px solid white;font-size: 16px;background-color: #4b5462;outline: none;opacity: 0.3;}
+input[type=text]:focus {font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;color: white;width: 300px;box-sizing: border-box;border: 2px solid white;font-size: 16px;background-color: #4b5462;outline: none;opacity: 0.7;}
+input[type=email] {font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;color: white;width: 300px;box-sizing: border-box;border: 2px solid white;font-size: 16px;background-color: #4b5462;outline: none;opacity: 0.3;}
+input[type=email]:focus {font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;color: white;width: 300px;box-sizing: border-box;border: 2px solid white;font-size: 16px;background-color: #4b5462;outline: none;opacity: 0.7;}
+input[type=Send]{width:30px;height:10px;background-color: #4b5462;border: none;color: white;padding: 15px 15px;text-decoration: none;cursor: pointer;}
+input[type=Send]:hover{width:30px;height:10px;background-color: #4b5462;border: none;color: white;padding: 15px 15px;text-decoration: underline;cursor: pointer;}
+textarea{background-color: #4b5462;}
+select {border: none;border-radius: 4px;background-color: #4b5462;outline: none}
+
+/* Video Background */
+.video-bg{position: fixed;z-index: -1000;width:100%;height:100%;overflow: hidden;top:0;left:0;}
+#video-bg-elem{position: absolute;min-width:100%;min-height:100%;top:0;left:0;}
+</style>
+
+</head>
+<body>
+
+<!-- Video Background -->
+<div class="video-bg">
+<video id="video-bg-elem" preload autoplay loop="loop">
+<source src="https://cdn.kastatic.org/videos/homepage-background.mp4" type="video/mp4" >
+<source src="https://cdn.kastatic.org/videos/homepage-background.webm" type="video/webm" >
+<source src="https://cdn.kastatic.org/videos/homepage-background.ogv" type="video/ogv" >
+</video>
+</div>
+
+<!-- Website Content -->
+<div class="content">
+<div class="container">
+<br/>
+<p style="font-size: 50px;line-height: 2px;font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;font-weight: lighter"><img src="https://yt3.ggpht.com/-KMyUX0GJNlo/AAAAAAAAAAI/AAAAAAAAAAA/MUVpsW7Z_uc/s900-c-k-no-mo-rj-c0xffffff/photo.jpg" alt="Logo" style="width:90px;height:60px;"> <a href="{% url 'project:index' %}" target="_blank" id="h1"> <b>Students Club</b> Academy </a><p>
+
+<!-- Navbar -->
+<div class="row">
+    <div class="col-sm-10 background">
+    <div class="container-fluid">
+    <!-- Header -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+    <!-- items -->
+        <div class="collapse navbar-collapse" id="topNavBar">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="{% url 'project:index' %}"> <span class="glyphicon glyphicon-th" aria-hidden="true"></span>&nbsp; Subject </a>
+                </li>
+                <li>
+                    <a href="{% url 'project:add-cource' %}"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp; Add Cource </a>
+                </li>
+                <li>
+                    <a href="{% url 'project:add-lecture' %}"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp; Add Lecture </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</div>
+<!-- Content -->
+<div class="row">
+    <div class="col-sm-10 background">
+        <div class="panel-group" id="accordion" style="font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;background-color:#4b5462;">
+
+            {% block body %}
+            {% endblock %}
+    <div class="col-sm-4 background">
+        <h3> Contact us: </h3>
+            <form>
+            SOCIAL:&nbsp;
+            &nbsp;<a href= "https://twitter.com/Studentsofksauh" target="_blank"><i class="fa fa-twitter" aria-hidden="true" ></i></a>
+            &nbsp;&nbsp;<a href= "https://www.enjazportal.com/" target="_blank"><i class="fa fa-rss" aria-hidden="true"></i></a><br/>
+        </form>
+        <br/>
+    </div>
+        </div>
+</div>
+
+<!-- Colom 2 Contact SCAcademy -->
+
+</div>
+</div>
+</div>
+
+<!-- Please work -->
+
+</body>
+</html>

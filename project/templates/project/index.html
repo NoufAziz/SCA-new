@@ -1,0 +1,45 @@
+{% extends 'project/base.html' %}
+{% block title %} Students Club Academy {% endblock %}
+{% block body %}
+
+<div class="panel panel-default" style="font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;background-color:#4b5462;">
+    <div class="panel-heading" style="font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;background-color:#4b5462;">
+        <h3 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse1"> <span class="glyphicon glyphicon-education" aria-hidden="true"></span> Our Mission</a></h3>
+    </div>
+        <div id="collapse1" class="panel-collapse collapse in">
+        <div class="panel-body">  الإسهام في التعريف بالجامعة من خلال المشاركة الفاعلة في مختلف الأنشطة الثقافية والاجتماعية والرياضية.
+        العمل على تقوية التواصل بين الطلاب وإدارة الجامعة بمختلف كلياتها وإداراتها.
+        إدارة الأنشطة التي تتبناها عمادة شؤون الطلاب من جهة ترتيبها وتطويرها.
+        تنظيم مشاركات الطلاب في الأنشطة بحيث يأخذ كل طالب حقه في المشاركة.
+        تعزيز انتماء الطلاب وولائهم لجامعتهم.
+        تطوير قدرات الطلاب وخبراتهم في المجالات المختلفة (ثقافياً واجتماعياً ورياضياً وقيادياً ) وتنمية مواهبهم.
+        خلق بيئة طلابية فاعلة وجاذبة من ناحية الخدمات والفعاليات المتاحة للطلاب.
+        تنمية الوعي الطلابي بالفرص المتاحة بالمدينة الجامعية واندماجهم في الأنشطة الطلابية المشتركة.</div>
+    </div>
+</div>
+
+
+
+
+<div class="panel panel-default" style="font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;background-color:#4b5462;">
+    <div class="panel-heading" style="font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;background-color:#4b5462;">
+        <h3 class="panel-title" ><a data-toggle="collapse" data-parent="#accordion" href="#collapse3"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> Subjects</a></h3>
+    </div>
+    <div id="collapse3" class="panel-collapse collapse" style="font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;background-color:#4b5462;">
+        <div class="panel-body" style="font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;background-color:#4b5462;">
+
+            {% if all_subjects %}
+                <ul>
+                {% for Subject in all_subjects %}
+                    <li><a href="{% url 'project:show_subject' Subject.pk %}" > {{ Subject.name }}</a> ({{ Subject.collage }}) </li>
+                {% endfor %}
+                </ul>
+                {% else %}
+                    <p> No subjects are available yet. </p>
+            {% endif %}
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

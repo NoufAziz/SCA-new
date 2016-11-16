@@ -1,0 +1,30 @@
+{% extends 'project/base.html' %}
+{% block title %} Comments {% endblock %}
+{% block body %}
+
+<div class="panel panel-default" style="font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;background-color:#4b5462;">
+    <div class="panel-heading" style="font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;background-color:#4b5462;">
+        <h3 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse1"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Comments </a></h3>
+    </div>
+        <div id="collapse1" class="panel-collapse collapse in">
+        <div class="panel-body">
+        <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% include 'project/form-template.html' %}
+            <div class="form-group" action="{% url 'project:comment_c' Cource.pk %}">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <label>Add your comment here:</label>
+                    <textarea></textarea>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+

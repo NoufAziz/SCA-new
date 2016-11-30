@@ -1,6 +1,9 @@
 {% extends 'project/base.html' %}
 {% block title %} {{ Cource.title }} {% endblock %}
+{% block add_comment %} <a href="{% url 'project:add-comment-c' %}"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp; Add Comment </a> {% endblock %}
+
 {% block body %}
+
 
 <div class="panel panel-default" style="font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;background-color:#4b5462;">
     <div class="panel-heading" style="font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;background-color:#4b5462;">
@@ -16,14 +19,14 @@
 
 <div class="panel panel-default" style="font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;background-color:#4b5462;">
     <div class="panel-heading" style="font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;background-color:#4b5462;">
-        <h3 class="panel-title" ><a data-toggle="collapse" data-parent="#accordion" href="#collapse3"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Lectures </a></h3>
+        <h3 class="panel-title" ><a data-toggle="collapse" data-parent="#accordion" href="#collapse2"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Lectures </a></h3>
     </div>
     <div id="collapse2" class="panel-collapse collapse" style="font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;background-color:#4b5462;">
         <div class="panel-body" style="font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;background-color:#4b5462;">
-            {% if all_lectures %}
+            {% if Cource.lecture_set.all %}
                 <ul>
-                {% for Lecture in all_lectures %}
-                    <li><a href="{% url 'project:show_lecture' Lecture.pk %}" > {{ Lecture.title }}</a> ({{ Lecture.pup_date }}) </li>
+                {% for Lecture in Cource.lecture_set.all %}
+                    <li><a href="{% url 'project:show_lecture' Cource.pk Lecture.pk %}"> { Lecture.title }} </a> ({{ Lecture.pup_date }}) </li>
                 {% endfor %}
                 </ul>
             {% else %}
@@ -40,11 +43,12 @@
     <div id="collapse3" class="panel-collapse collapse" style="font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;background-color:#4b5462;">
         <div class="panel-body" style="font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;background-color:#4b5462;">
                 <ul>
-                {% for Comment_c %}
+                {% for comment in comment_c %}
                     <li>{{ Comment_c.author }}({{ Comment_c.pup_date }}) <br>({{ Comment_c.body }}) </li>
                 {% endfor %}
                 </ul>
         </div>
     </div>
 </div>
+
 {% endblock %}

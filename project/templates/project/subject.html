@@ -8,7 +8,7 @@
     </div>
     <div id="collapse1" class="panel-collapse collapse in">
         <div class="panel-body">
-            <h2> {{ Subject.collage }} {{ Cource.level }}</h2>
+            <h2> {{ Subject.collage }} - {{ Subject.level }}</h2>
         </div>
     </div>
 </div>
@@ -19,10 +19,10 @@
     </div>
     <div id="collapse3" class="panel-collapse collapse" style="font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;background-color:#4b5462;">
         <div class="panel-body" style="font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;background-color:#4b5462;">
-            {% if all_cources %}
+            {% if Subject.cource_set.all %}
                 <ul>
-                {% for Cource in all_cources %}
-                    <li><a href="{% url 'project:show_cource' Cource.pk %}">{{ Cource.title }}</a></li>
+                {% for Cource in Subject.cource_set.all %}
+                    <li><a href="{% url 'project:show_cource' Subject.pk Cource.pk %}">{{ Cource.title }}</a></li>
                 {% endfor %}
                 </ul>
             {% else %}

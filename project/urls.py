@@ -29,8 +29,8 @@ urlpatterns = [
     #/StudentsClubAcademy/Subject/1/Cource/2/delete
 
 
-    url(r'^subject/(?P<subject_id>[0-9]+)/cource/(?P<cource_id>[0-9]+)/lecture/(?P<lecture_id>[0-9]+)/$', views.ShowLectureView.as_view(), name='show_lecture'),
-    #/StudentsClubAcademy/Subject/1/Cource/2/Lecture/1/
+    url(r'^cource/(?P<cource_id>[0-9]+)/lecture/(?P<lecture_id>[0-9]+)/$', views.ShowLectureView.as_view(), name='show_lecture'),
+    #/StudentsClubAcademy/Cource/2/Lecture/1/
 
     url(r'^lecture/add/$', views.LectureCreate.as_view(), name='add-lecture'),
     #/StudentsClubAcademy/Subject/1/Cource/2/Lecture/add/
@@ -39,5 +39,14 @@ urlpatterns = [
     url(r'^subject/(?P<subject_id>[0-9]+)/cource/(?P<cource_id>[0-9]+)/lecture/(?P<lecture_id>[0-9]+)/delete/$', views.LectureDelete.as_view(), name='delete-lecture'),
     #/StudentsClubAcademy/Subject/1/Cource/2/Lecture/2/delete
 
+    url(r'^commentforlecture/add/$', views.LectureComment.as_view(), name='add-comment-l'),
+    #/StudentsClubAcademy/commentforlecture/add/
+    url(r'^lecture/(?P<lecture_id>\d+)/comment/$', views.comment_l, name='l_comment'),
+    #/StudentsClubAcademy/Lecture/1/comment/
+
+    url(r'^commentforcource/add/$', views.CourceComment.as_view(), name='add-comment-c'),
+    #/StudentsClubAcademy/commentforcource/add/
+    url(r'^cource/(?P<cource_id>\d+)/comment/$', views.comment_c, name='c_comment'),
+    #/StudentsClubAcademy/cource/1/comment/
 
 ]

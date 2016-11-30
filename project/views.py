@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth import authenticate, login
 from django.views.generic import View
 from django.views import generic
-from project.models import Subject, Cource, Lecture
+from project.models import Subject, Cource, Lecture, Comment_l, Comment_c
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.core.urlresolvers import reverse_lazy, reverse
 from .forms import Userform
@@ -41,31 +41,34 @@ class IndexView(generic.ListView):
 
 class SubjectView(generic.ListView):
     template_name = 'project/subject.html'
-    context_object_name = "all_cources"
+    context_object_name = "Subject"
     def get_queryset(self):
         return Cource.objects.all()
 
 class ShowSubjectView(generic.DetailView):
     model = Subject
     template_name = 'project/subject.html'
+    context_object_name = "Subject"
     pk_url_kwarg = "subject_id"
     query_pk_and_slug = True
 
 class CourceView(generic.ListView):
     template_name = 'project/cource.html'
-    context_object_name = "all_lectures"
+    context_object_name = "Cource"
     def get_queryset(self):
         return Lecture.objects.all()
 
 class ShowCourceView(generic.DetailView):
     model = Cource
     template_name = 'project/cource.html'
+    context_object_name = "Cource"
     pk_url_kwarg = "cource_id"
     query_pk_and_slug = True
 
 class ShowLectureView(generic.DetailView):
     model = Lecture
     template_name = 'project/show_lecture.html'
+    context_object_name = "Lecture"
     pk_url_kwarg = "lecture_id"
     query_pk_and_slug = True
 
@@ -107,17 +110,14 @@ class LectureDelete(DeleteView):
     pk_url_kwarg = "lecture_id"
     query_pk_and_slug = True
 
-def comment_l(request, lecture_id):
-    lecture= get_object_or_404(Lecture, id=lecture_id)
-    lecture.comment_l_set.all()
-    user_comment=request.POST['comment']
-    author = request.POST['author']
-    comment_l.objects.create(
-        lecture=lecture,
-        author=author,
-        body=user_comment,
-    )
-    return HttpResponseRedirect(reverse('show_lecture', args=(lecture_id)))
+
+class CourceComment(CreateView):
+    model = Comment_c
+    fields = ['cource','author', 'body' ]
+    success_url = reverse_lazy('project:index')
+    pk_url_kwarg = "cource_id"
+    context_object_name = "Cource"
+    query_pk_and_slug = True
 
 def comment_c(request, cource_id):
     cource= get_object_or_404(Cource, id=cource_id)
@@ -130,3 +130,25 @@ def comment_c(request, cource_id):
         body=user_comment,
     )
     return HttpResponseRedirect(reverse('show_cource', args=(cource_id)))
+
+
+class LectureComment(CreateView):
+    model = Comment_l
+    fields = ['lecture','author', 'body' ]
+    success_url = reverse_lazy('project:index')
+    pk_url_kwarg = "lecture_id"
+    context_object_name = "Lecture"
+    query_pk_and_slug = True
+
+
+def comment_l(request, lecture_id):
+    lecture= get_object_or_404(Lecture, id=lecture_id)
+    lecture.comment_l_set.all()
+    user_comment=request.POST['comment']
+    author = request.POST['author']
+    comment_l.objects.create(
+        lecture=lecture,
+        author=author,
+        body=user_comment,
+    )
+    return HttpResponseRedirect(reverse('show_lecture', args=(lecture_id)))

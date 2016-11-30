@@ -10,6 +10,7 @@ class Subject(models.Model):
         return reverse('project:cource', kwargs={'pk':self.pk})
     def __unicode__(self):
         return self.name + '-' + self.collage
+
 class Cource(models.Model):
     subject = models.ForeignKey(Subject)
     title = models.CharField(max_length=100)

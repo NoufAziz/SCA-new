@@ -5,7 +5,6 @@
 {% block body %}
 
 
-
 <div class="panel panel-default" style="font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;background-color:#4b5462;">
     <div class="panel-heading" style="font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;background-color:#4b5462;">
         <h3 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse1"> <span class="glyphicon glyphicon-file" aria-hidden="true"></span> {{ Lecture.title }}</a></h3>
@@ -25,11 +24,16 @@
     </div>
     <div id="collapse2" class="panel-collapse collapse" style="font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;background-color:#4b5462;">
         <div class="panel-body" style="font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;background-color:#4b5462;">
-                <ul>
-                {% for lecture in Comment_l %}
-                    <li>{{ Comment_l.author }}({{ Comment_l.pup_date }}) <br>({{ Comment_l.body }}) </li>
+
+                {% if Lecture.comment_l_set.all %}
+                {% for comment_l in Lecture.comment_l_set.all %}
+                <h3>{{ comment_l.author }} <h6>{{ comment_l.pup_date }}</h6></h3>
+                <h4>"{{ comment_l.body }}"</h4>
                 {% endfor %}
-                </ul>
+                {% else %}
+                <p> No comments. </p>
+                {% endif %}
+
         </div>
     </div>
 </div>

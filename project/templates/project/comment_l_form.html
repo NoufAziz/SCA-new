@@ -11,10 +11,9 @@
             <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 {% include 'project/form-template.html' %}
-                <div class="form-group" action="{% url 'project:l_comment' Lecture.pk %}">
+                <div class="form-group" action="{% url 'project:add-comment-l' %}">
                     <div class="col-sm-offset-2 col-sm-10">
-                        <label>Add your comment here:</label>
-                        <textarea></textarea>
+
                         <button type="submit" class="btn btn-success">Submit</button>
                     </div>
                 </div>

@@ -115,6 +115,7 @@ class CourceComment(CreateView):
     model = Comment_c
     fields = ['cource','author', 'body' ]
     success_url = reverse_lazy('project:index')
+    context_object_name = "Cource"
     pk_url_kwarg = "cource_id"
     query_pk_and_slug = True
 
@@ -135,8 +136,8 @@ class LectureComment(CreateView):
     model = Comment_l
     fields = ['lecture','author', 'body' ]
     success_url = reverse_lazy('project:index')
-    pk_url_kwarg = "lecture_id"
     context_object_name = "Lecture"
+    pk_url_kwarg = "lecture_id"
     query_pk_and_slug = True
 
 
@@ -150,4 +151,4 @@ def comment_l(request, lecture_id):
         author=author,
         body=user_comment,
     )
-    return HttpResponseRedirect(reverse('show_lecture', args=(lecture_id)))
+    return HttpResponseRedirect(reverse('ShowLectureView', args=(lecture_id)))

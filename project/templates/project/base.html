@@ -96,7 +96,7 @@ select {border: none;border-radius: 4px;background-color: #4b5462;outline: none}
                     <a href="{% url 'project:add-lecture' %}"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp; Add Lecture </a>
                 </li>
                 <li>
-                    {% block add_comment %} {% endblock %}
+                    {% block add %} <a href="{% url 'project:register' %}"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp; Register </a> {% endblock %}
                 </li>
             </ul>
         </div>

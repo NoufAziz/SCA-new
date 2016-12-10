@@ -116,7 +116,6 @@ class CourceComment(CreateView):
     fields = ['cource','author', 'body' ]
     success_url = reverse_lazy('project:index')
     pk_url_kwarg = "cource_id"
-    context_object_name = "Cource"
     query_pk_and_slug = True
 
 def comment_c(request, cource_id):

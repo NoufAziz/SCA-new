@@ -1,6 +1,6 @@
 {% extends 'project/base.html' %}
 {% block title %} {{ Cource.title }} {% endblock %}
-{% block add_comment %} <a href="{% url 'project:add-comment-c' %}"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp; Add Comment </a> {% endblock %}
+{% block add %} <a href="{% url 'project:add-comment-c' %}"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp; Add Comment </a> {% endblock %}
 
 {% block body %}
 
@@ -11,8 +11,9 @@
     </div>
         <div id="collapse1" class="panel-collapse collapse in">
         <div class="panel-body">
-            <h2>{{ Cource.pup_date }} ({{ Cource.location }})</h2>
-            <h4> {{ Cource.description }}</h4>
+            <h6>{{ Cource.pup_date }}</h6>
+            <h4> Course Location: {{ Cource.location }}</h4>
+            <h4> Description: {{ Cource.description }}</h4>
         </div>
     </div>
 </div>
@@ -26,7 +27,7 @@
             {% if Cource.lecture_set.all %}
                 <ul>
                 {% for Lecture in Cource.lecture_set.all %}
-                    <li><a href="{% url 'project:show_lecture' Cource.pk Lecture.pk %}"> { Lecture.title }} </a> ({{ Lecture.pup_date }}) </li>
+                    <li><a href="{% url 'project:show_lecture' Cource.pk Lecture.pk %}"> {{ Lecture.title }} </a> ({{ Lecture.pup_date }}) </li>
                 {% endfor %}
                 </ul>
             {% else %}

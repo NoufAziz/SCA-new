@@ -1,6 +1,6 @@
 {% extends 'project/base.html' %}
 {% block title %} {{ Lecture.title }} {% endblock %}
-{% block add_comment %} <a href="{% url 'project:add-comment-l' %}"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp; Add Comment </a> {% endblock %}
+{% block add %} <a href="{% url 'project:add-comment-l' %}"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp; Add Comment </a> {% endblock %}
 
 {% block body %}
 
@@ -13,9 +13,9 @@
     <div id="collapse1" class="panel-collapse collapse in">
         <div class="panel-body">
             <h6> {{ Lecture.pup_date }} </h6>
-            <h2>{{ Lecture.link }}</h2>
-            <h3>{{ Lecture.objectives }} </h3>
-            <h4>{{ Lecture.sources }} </h4>
+            <h3>Link: {{ Lecture.link }}</h3>
+            <h3>Objectives: {{ Lecture.objectives }} </h3>
+            <h3>Sources: {{ Lecture.sources }} </h3>
         </div>
     </div>
 </div>

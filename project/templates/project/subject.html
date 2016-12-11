@@ -22,7 +22,7 @@
             {% if Subject.cource_set.all %}
                 <ul>
                 {% for Cource in Subject.cource_set.all %}
-                    <li><a href="{% url 'project:show_cource' Subject.pk Cource.pk %}">{{ Cource.title }}</a></li>
+                    <li><a href="{% url 'project:show_cource' Subject.pk Cource.pk %}">{{ Cource.title }}</a></li></br>
                 {% endfor %}
                 </ul>
             {% else %}

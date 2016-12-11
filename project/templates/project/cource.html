@@ -27,7 +27,7 @@
             {% if Cource.lecture_set.all %}
                 <ul>
                 {% for Lecture in Cource.lecture_set.all %}
-                    <li><a href="{% url 'project:show_lecture' Cource.pk Lecture.pk %}"> {{ Lecture.title }} </a> ({{ Lecture.pup_date }}) </li>
+                    <li><a href="{% url 'project:show_lecture' Cource.pk Lecture.pk %}"> {{ Lecture.title }} </a> ({{ Lecture.pup_date }}) </li></br>
                 {% endfor %}
                 </ul>
             {% else %}

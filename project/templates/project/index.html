@@ -31,7 +31,7 @@
             {% if all_subjects %}
                 <ul>
                 {% for Subject in all_subjects %}
-                    <li><a href="{% url 'project:show_subject' Subject.pk %}" > {{ Subject.name }}</a> ({{ Subject.collage }}) </li>
+                    <li><a href="{% url 'project:show_subject' Subject.pk %}" > {{ Subject.name }}</a> ({{ Subject.collage }}) </li></br>
                 {% endfor %}
                 </ul>
                 {% else %}

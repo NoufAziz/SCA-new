@@ -4,11 +4,9 @@
     <list default="true" id="abc56504-9c12-4320-bd8d-455cd20e762d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/templates/project/comment_c_form.html" afterPath="$PROJECT_DIR$/project/templates/project/comment_c_form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/templates/project/comment_l_form.html" afterPath="$PROJECT_DIR$/project/templates/project/comment_l_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/templates/project/cource.html" afterPath="$PROJECT_DIR$/project/templates/project/cource.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/templates/project/show_lecture.html" afterPath="$PROJECT_DIR$/project/templates/project/show_lecture.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/views.py" afterPath="$PROJECT_DIR$/project/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/templates/project/index.html" afterPath="$PROJECT_DIR$/project/templates/project/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/templates/project/subject.html" afterPath="$PROJECT_DIR$/project/templates/project/subject.html" />
     </list>
     <ignored path="SCAcademy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,14 +26,52 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/project/views.py">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/templates/project/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5575342">
-              <caret line="138" column="28" selection-start-line="138" selection-start-column="28" selection-end-line="138" selection-end-column="34" />
+            <state vertical-scroll-proportion="-12.423077">
+              <caret line="98" column="69" selection-start-line="98" selection-start-column="69" selection-end-line="98" selection-end-column="69" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="subject.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/templates/project/subject.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.692307">
+              <caret line="24" column="119" selection-start-line="24" selection-start-column="119" selection-end-line="24" selection-end-column="119" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/templates/project/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-21.576923">
+              <caret line="33" column="132" selection-start-line="33" selection-start-column="132" selection-end-line="33" selection-end-column="137" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cource.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/project/templates/project/cource.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4588068">
+              <caret line="29" column="149" selection-start-line="29" selection-start-column="149" selection-end-line="29" selection-end-column="149" />
               <folding>
-                <element signature="e#0#64#0" expanded="true" />
-                <element signature="e#498#1314#0" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -63,7 +99,6 @@
         <option value="$PROJECT_DIR$/project/static/project/style.css" />
         <option value="$PROJECT_DIR$/project/forms.py" />
         <option value="$PROJECT_DIR$/project/templates/project/form-template.html" />
-        <option value="$PROJECT_DIR$/project/templates/project/index.html" />
         <option value="$PROJECT_DIR$/project/templates/project/comment_l.html" />
         <option value="$PROJECT_DIR$/project/templates/project/lecture_form.html" />
         <option value="$PROJECT_DIR$/project/templates/project/cource_form.html" />
@@ -72,12 +107,13 @@
         <option value="$PROJECT_DIR$/project/templates/project/comment_c.html" />
         <option value="$PROJECT_DIR$/project/templates/project/lecture.html" />
         <option value="$PROJECT_DIR$/project/urls.py" />
-        <option value="$PROJECT_DIR$/project/templates/project/subject.html" />
         <option value="$PROJECT_DIR$/project/templates/project/base.html" />
         <option value="$PROJECT_DIR$/project/templates/project/comment_l_form.html" />
         <option value="$PROJECT_DIR$/project/views.py" />
         <option value="$PROJECT_DIR$/project/templates/project/comment_c_form.html" />
         <option value="$PROJECT_DIR$/project/templates/project/show_lecture.html" />
+        <option value="$PROJECT_DIR$/project/templates/project/index.html" />
+        <option value="$PROJECT_DIR$/project/templates/project/subject.html" />
         <option value="$PROJECT_DIR$/project/templates/project/cource.html" />
       </list>
     </option>
@@ -623,13 +659,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/templates/project/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6761364">
-          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SCAcademy/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -651,20 +680,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/templates/project/cource_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9230769">
-          <caret line="6" column="177" selection-start-line="6" selection-start-column="177" selection-end-line="6" selection-end-column="177" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/templates/project/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.014204546">
-          <caret line="98" column="69" selection-start-line="98" selection-start-column="69" selection-end-line="98" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/templates/project/registration_form.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.024147727">
@@ -676,15 +691,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.07244318">
           <caret line="3" column="45" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/templates/project/comment_l_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.807693">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -692,15 +698,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="41" column="75" selection-start-line="41" selection-start-column="75" selection-end-line="41" selection-end-column="88" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/templates/project/subject.html">
+    <entry file="file://$PROJECT_DIR$/project/templates/project/show_lecture.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24147727">
-          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
-          <folding />
+        <state vertical-scroll-proportion="0.5411932">
+          <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.9547945">
+          <caret line="138" column="28" selection-start-line="138" selection-start-column="28" selection-end-line="138" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -712,10 +723,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/project/templates/project/comment_l_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3622159">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/templates/project/cource_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14488636">
+          <caret line="6" column="177" selection-start-line="6" selection-start-column="177" selection-end-line="6" selection-end-column="177" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/templates/project/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.423077">
+          <caret line="98" column="69" selection-start-line="98" selection-start-column="69" selection-end-line="98" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/templates/project/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.576923">
+          <caret line="33" column="132" selection-start-line="33" selection-start-column="132" selection-end-line="33" selection-end-column="137" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/templates/project/subject.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.692307">
+          <caret line="24" column="119" selection-start-line="24" selection-start-column="119" selection-end-line="24" selection-end-column="119" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/project/templates/project/cource.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2315341">
-          <caret line="51" column="19" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.4588068">
+          <caret line="29" column="149" selection-start-line="29" selection-start-column="149" selection-end-line="29" selection-end-column="149" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -727,30 +778,6 @@
             <element signature="n#style#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/templates/project/show_lecture.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5411932">
-          <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5575342">
-          <caret line="138" column="28" selection-start-line="138" selection-start-column="28" selection-end-line="138" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-            <element signature="e#498#1314#0" expanded="false" />
           </folding>
         </state>
       </provider>
